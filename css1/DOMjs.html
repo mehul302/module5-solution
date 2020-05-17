@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+        <h1 id="head1">DOM Manipulation</h1>
+        <div>
+            Hello 
+            <input type="text" id="i1">
+            <button onclick="fun1()" id="btn1">Click Me</button>
+            <!--<button>Click Me</button>-->
+        </div>
+        <div id="div1"></div>
+        <script type="text/javascript">
+            /*var a=document.getElementById("head1");
+            console.log(a);*/
+            function fun1(){
+                var name=document.getElementById("i1").value;
+                document.getElementById("div1").innerHTML=name;
+                document.getElementById("btn1").innerHTML="Clicked";
+            }
+            //document.querySelector("button").addEventListener("click",fun1());
+
+            document.querySelector("body").addEventListener("mousemove",function(event){
+                if(event.shiftKey == true){
+                    console.log(event.clientX);
+                    console.log(event.clientY);
+                }
+            });
+        </script>
+    </body>
+</html>
